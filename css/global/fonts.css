@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Archangelsk Regular', serif;
+    font-weight: 400;
+    src: url('../fonts/Archangelsk Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto Regular', sans-serif;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
