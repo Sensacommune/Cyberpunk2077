@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Archangelsk Regular', serif;
+    font-family: 'Archangelsk', serif;
     font-weight: 400;
-    src: url('../fonts/Archangelsk Regular.ttf');
+    src: url('../fonts/Archangelsk.ttf');
 }
 @font-face {
     font-family: 'Roboto Regular', sans-serif;
