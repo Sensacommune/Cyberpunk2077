@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 1000px;
+    height: 753px;
     width: 100%;
 }
 .hero__titile{
@@ -57,21 +57,17 @@
     top: 330px;
     left: 470px;
 }
-.night-city{
-    background-color: var(--white);
-
-}
-span {
-    color: var(--blue);
-}
 .night-citycontainer{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 111px;
+}
+.night-citycontent__text span {
+    color: var(--blue);
+    font-weight: 700;
 }
 .night-citycontent__titile{
     font-family: 'Archangelsk', sans-serif;
@@ -83,80 +79,213 @@ span {
     font-family: 'Roboto Regular', sans-serif;
     font-size: 18px;
     color: var(--gray);
-    margin-bottom: 70px;
-    font-weight: 50;
-    line-height: 1.5;
-    max-width: 900px;
-    margin-left: 235px;
+    margin-bottom: 45px;
+    font-weight: 400;
+    line-height: 2;
+
 }
 .night-city__grid {
+    max-width: 1200px;
+    margin: 40px auto;
+
     display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: 1fr 1fr;
+
     gap: 32px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    height: 420px;
 }
-
-.img-left-1 {
-    align-self: center;
-}
-.img-left-1 img {
+.night-city__grid img {
     width: 100%;
-    height: auto;
-}
+    height: 100%;
+    object-fit: cover;
+    display: block;
 
-.img-left-2 {
-    align-self: center;
+    clip-path: polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%);
 }
-.img-left-2 img {
-    height: auto;
-    width: 100%;
-}
-
-.img-right {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-.img-right img {
-    width: 100%;
-    height: auto;
+.night-city__grid_big {
+    grid-row: 1 / 3;   /* с первой строки до третьей (не включительно) */
+    grid-column: 2 / 3;
 }
 .GMPS{
-    background-color: var(--black);
+    background: var(--black);
+    color: var(--white);
 }
-.GMPS__container{
-    display: flex;
-    flex-direction: column;
-    height: 814px;
-    width: 100%;
-}
-.content__titile {
+.GMPS__container {
+    max-width: 1200px;
+    margin: 0 auto;
+
     font-family: 'Archangelsk', sans-serif;
+}
+.GMPS__form_and_ph {
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;      /* заголовок формы и фигура на одном уровне по вертикали */
+    gap: 32px;
+}
+.content__header {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+
+    padding-bottom: 39px;
+}
+.content__title {
+    font-family: 'Archangelsk', serif;
     font-size: 62px;
     color: var(--white);
+
+    margin: 24px 0 24px;
+}
+.content__figure {
+    display: block;
+    width: 10%;
 }
 .content__text{
-    font-family: 'Roboto Regular', sans-serif;
+    font-family: 'Roboto Thin', sans-serif;
     font-size: 18px;
     color: var(--white);
-    max-width: 952px;
+    font-weight: 400;
+
+    padding-bottom: 25px;
 }
-.content__form {
-    display: flex;
-    background-color: var(--black);
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 460px;
-    width: 383px;
-}
-.content__label {
+/* ОБЁРТКА ФОРМЫ */
+.form {
+    max-width: 420px;
+    width: 100%;
+    padding: 0;              /* без рамок, форма просто лежит на чёрном фоне */
     color: var(--white);
 }
-.content__photo {
+
+/* ПОДПИСИ ПОЛЕЙ */
+.form__label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+/* ТЕКСТОВЫЕ ПОЛЯ */
+.form__input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #666;  /* тонкая серая линия */
+    padding: 8px 0 10px;
+    font-size: 16px;
+    color: var(--white);
+    outline: none;
+}
+
+/* отступ между группами полей */
+.form__group {
+    margin-bottom: 28px;
+}
+
+/* подсветка при фокусе */
+.form__input:focus {
+    border-bottom-color: var(--yellow);
+}
+
+/* БЛОК ПРИКРЕПЛЕНИЯ ФАЙЛА */
+.form__file {
+    margin: 32px 0 28px;
+    padding: 40px 20px;
+    border: 1px dashed var(--gray);
+    text-align: center;
+}
+
+.form__file-title {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.form__file-sub {
+    display: block;
+    font-size: 12px;
+    color: var(--gray);
+}
+
+/* КНОПКА ОТПРАВИТЬ */
+.form__submit {
+    display: inline-block;
+    border: none;
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 48px;
+    cursor: pointer;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.form__submit:hover {
+    opacity: 0.9;
+}
+
+.form__submit:active {
+    transform: translateY(1px);
+}
+
+/* ЧЕКБОКС */
+.form__checkbox-wrap {
+    margin-top: 18px;
+    font-size: 12px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.form__checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form__checkbox-custom {
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--white);
+    display: inline-block;
+    position: relative;
+}
+
+.form__checkbox:checked + .form__checkbox-custom {
+    background: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.form__checkbox:checked + .form__checkbox-custom::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    width: 7px;
+    height: 10px;
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    transform: rotate(40deg);
+}
+
+.form__checkbox-text {
+    color: var(--gray);
+    font-size: 12px;
+}
+.content__photo {
     width: 788px;
-    height: 400px;
+    height: auto;
+}
+.content__text span {
+    color: var(--blue);
+    font-weight: 400;
+}
+.GMPS__top {
+    display: flex;
+    justify-content: flex-start;
+}
+.GMPS__bottom {
+    display: flex;
+    justify-content: flex-start;
 }
 .HP {
     display: flex;
