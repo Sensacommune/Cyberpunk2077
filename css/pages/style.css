@@ -288,9 +288,103 @@
     justify-content: flex-start;
 }
 .HP {
-    display: flex;
+    background: var(--yellow);          /* жёлтый фон, как на макете */
+}
+
+.HP__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+/* ВЕСЬ КОНТЕНТ СЕКЦИИ: фото слева, текст справа */
+.HP__container_data {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;  /* левая колонка шире */
+    column-gap: 80px;
+    row-gap: 24px;
+    align-items: center;
+}
+
+/* левая колонка – сразу занимает все строки */
+.data__photos {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;              /* с 1-й по 4-ю строку, т.е. по высоте всего текста */
+
+    display: flex;                /* внутри – две фотки столбиком */
     flex-direction: column;
-    height: 676px;
-    width: 100%;
-    background-color: var(--yellow);
+    align-items: center;
+    gap: 40px;
+}
+
+/* верхняя и нижняя картинка */
+.data_photo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.data_photo_1 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* остальной текст автоматически уйдёт во 2-ю колонку */
+.data__titile {
+    grid-column: 2 / 3;
+    font-family: 'Archangelsk', sans-serif;
+    font-size: 62px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    max-width: 520px;
+}
+
+.data__text {
+    grid-column: 2 / 3;
+    max-width: 624px;
+    margin: 0 0 20px;
+
+    line-height: normal;
+}
+
+.data__list {
+    grid-column: 2 / 3;
+    margin: 0 0 32px;
+    padding-left: 20px;
+}
+
+.data__btn {
+    align-self: start;
+    padding: 16px 16px;
+    border: none;
+    cursor: pointer;
+
+    background-color: var(--black);
+    color: var(--yellow);
+    font-size: 18px;
+    font-family: 'Archangelsk', sans-serif;
+}
+.data__list-item {
+    margin-bottom: 15px;
+    position: relative;
+
+    padding-left: 32px;
+}
+.data__list-item::before {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+.data__list-item.paint::before {
+    background-image: url(images/paint.png);
+}
+.data__list-item.stars::before {
+    background-image: url(images/stars.png);
+}
+.data__list-item.speed::before {
+    background-image: url(images/speed.png);
 }
