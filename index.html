@@ -74,11 +74,16 @@
                                 </div>
 
                                 <div class="form__file">
-                                    <span class="form__file-title">Прикрепить скриншот</span>
-                                    <span class="form__file-sub">.png / .jpg / .pdf</span>
+                                    <button>
+                                        <span class="form__file-title">Прикрепить скриншот</span>
+                                        <span class="form__file-sub">.png / .jpg / .pdf</span>
+                                    </button>
+
+                                    <input type="file" />
                                 </div>
 
-                                <button class="form__submit" type="submit">Отправить</button>
+                                <button type="button" class="form__submit" onclick="showCaptcha()">Отправить</button>
+
 
                                 <label class="form__checkbox-wrap">
                                     <input class="form__checkbox" type="checkbox">
@@ -111,33 +116,127 @@
                     </div>
                     <h2 class="data__titile">Полное погружение вместе с HP</h2>
                     <p class="data__text">Погрузись в современные экшен-игры с реалистичным изображением с помощью монитора с диагональю 23,8 дюйма, созданном для отображения максимально насыщенных цветов. Успевай реагировать на любые события с временем отклика 1 мс и частотой в 144 Гц!</p>
-                    <ul class="data__list">
-                        <li class="data__list-item paint">Яркие насыщенные цвета</li>
-                        <li class="data__list-item stars">Кристальная четкость изображения</li>
-                        <li class="data__list-item speed">Быстрые движения и плавный геймплей</li>
+                    <ul class="content-block__list">
+                        <li class="content-block__item">
+                            <object
+                                    type="image/svg+xml"
+                                    data="images/paint.png"
+                                    width="32px"
+                                    height="32px"
+                            >
+                                Your browser does not support SVG
+                            </object>
+                            Яркие насыщенные цвета
+                        </li>
+                        <li class="content-block__item">
+                            <object
+                                    type="image/svg+xml"
+                                    data="images/stars.png"
+                                    width="32px"
+                                    height="32px"
+                            >
+                                Your browser does not support SVG</object
+                            >Кристальная четкость изображения
+                        </li>
+                        <li class="content-block__item">
+                            <object type="image/svg+xml" data="images/speed.png" width="32px" height="32px">
+                                Your browser does not support SVG</object
+                            >Быстрые движения и плавный геймплей
+                        </li>
                     </ul>
                     <button class="data__btn">Подробнее</button>
                 </div>
             </div>
         </section>
-        <section class="BuyGame">
-            <div class="BuyGame__container">
-                <div class="BuyGame__container info">
-                    <div class="info__img">
-                        <img src="images/BuyGameImg.jpg" alt="">
-                    </div>
-                    <h2 class="info__title">Купить игру Cyberpunk 2077</h2>
-                    <span class="info__text">В комплект входит:</span>
-                    <ul class="info__list">
-                        <li class="info__list-item">Футляр с игровыми дисками</li>
-                        <li class="info__list-item">Футляр с кодом для загрузки игры и дисками (pc)</li>
-                        <li class="info__list-item">Справочник с информацией об игровом мире</li>
+        <section class="cyberpunk-game">
+            <div class="cyberpunk-game__container">
+                <div class="cyberpunk-game__content">
+                    <h2 class="title title_white">Купить игру Cyberpunk 2077</h2>
+                    <h3 class="cyberpunk-game__title">В комплект входит:</h3>
+                    <ul class="cyberpunk-game__list">
+                        <li class="cyberpunk-game__item">
+                            <object type="image/svg+xml" data="images/disk.png" width="32px" height="32px">
+                                Your browser does not support SVG
+                            </object>
+                            Футляр с игровыми дисками
+                        </li>
+                        <li class="cyberpunk-game__item">
+                            <object type="image/svg+xml" data="images/wysiwyg.png" width="32px" height="32px">
+                                Your browser does not support SVG</object
+                            >Футляр с кодом для загрузки игры и дисками (pc)
+                        </li>
+                        <li class="cyberpunk-game__item">
+                            <object
+                                    type="image/svg+xml"
+                                    data="images/collections.png"
+                                    width="32px"
+                                    height="32px"
+                            >
+                                Your browser does not support SVG</object
+                            >Справочник с информацией об игровом мире
+                        </li>
                     </ul>
+
+                    <div class="cyberpunk-game__choosing-platform">
+                        <h3 class="cyberpunk-game__title">Выберите платформу:</h3>
+                        <ul class="cyberpunk-game__logos">
+                            <li class="cyberpunk-game__logo">
+                                <object type="image/svg+xml" data="images/PC.png" width="62px" height="35px">
+                                    Your browser does not support SVG
+                                </object>
+                            </li>
+                            <li class="cyberpunk-game__logo">
+                                <object
+                                        type="image/svg+xml"
+                                        data="images/xbox-one-3%20logo.png"
+                                        width="178px"
+                                        height="35px"
+                                >
+                                    Your browser does not support SVG
+                                </object>
+                            </li>
+                            <li class="cyberpunk-game__logo">
+                                <object type="image/svg+xml" data="images/stadia%20logo.png" width="58px" height="50px">
+                                    Your browser does not support SVG
+                                </object>
+                            </li>
+                            <li class="cyberpunk-game__logo">
+                                <object
+                                        type="image/svg+xml"
+                                        data="images/PS4.png"
+                                        width="168px"
+                                        height="35px"
+                                >
+                                    Your browser does not support SVG
+                                </object>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </section>
+        <section class="license">
+            <div class="license__container">
+                <ul class="license__brand-list">
+                    <li class="brand__item">
+                        <img src="images/Cyberpunk_2077_logo%202.png" alt="Cuberpunk 2077">
+                    </li>
+                    <li class="brand__item">
+                        <img src="images/CD_Projekt_logo%201.png" alt="CD Projekt Red">
+                    </li>
+                </ul>
+                <ul class="license__doc">
+                    <li><a href="#">Лицензия</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
             </div>
         </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®</p>
+        </div>
+    </footer>
 </body>
 </html>
