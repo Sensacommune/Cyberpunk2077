@@ -397,7 +397,6 @@
     min-height: 717px;
     position: relative;
     background-color: var(--black);
-    overflow: hidden;
 }
 
 .cyberpunk-game:before {
@@ -409,18 +408,15 @@
     width: 50%;
     height: 100%;
 
-    background-image: url('images/game-disks.png');
+    background-image: url('../../images/BuyGameImg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-    z-index: 1;
 }
 
 .cyberpunk-game__container {
     position: relative;
     height: 100%;
-    z-index: 2;
 }
 
 .cyberpunk-game__content {
