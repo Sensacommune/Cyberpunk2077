@@ -111,6 +111,12 @@
     background: var(--black);
     color: var(--white);
 }
+.GMPS__top img {
+    width: 100%;
+}
+.GMPS__bottom img {
+    width: 100%;
+}
 .GMPS__container {
     max-width: 1200px;
     margin: 0 auto;
